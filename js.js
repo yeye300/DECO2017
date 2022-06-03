@@ -1,5 +1,5 @@
 let date = new Date();
-// 点击切换月份的事件
+// Click to switch the month's events
 document.getElementById('prev').addEventListener('click',function(){
     date.setMonth(date.getMonth()-1);
     add();
@@ -10,57 +10,62 @@ document.getElementById('next').addEventListener('click',function(){
 })
 add();
 
-//制作日历的函数
+// Make calendar function
 function add(){
-    // 当前年
+    // The current year
     let cYear = date.getFullYear();
-    // 当前月
+    // The current month
     let cMonth = date.getMonth()+1;
-    // 获取到当前日期
+    // The current day
     let cDay = date.getDate();
-    // 写入年月
+    // Write monthly on calendar
     document.getElementById('year').innerHTML = cYear + '年';
     document.getElementById('month').innerHTML = cMonth + '月';
     document.querySelector(".bigMonth").innerHTML = cMonth
 
     let days = new Date(cYear,cMonth,0);
-    // 当前月份的天数
+    // Number of days in the current month
     let n = days.getDate();
-    // 每个月的第一天是星期几
+    // What day is the first day of each month
     let week = new Date(cYear,cMonth-1,1).getDay();
+
+
     let html = '';
-    // 写入dom
+    // dom
     for(let i=0;i<week;i++){
-        html+=`<li class="invalid"></li>`
+        html += `<li class="invalid"></li>`
     }
+
     for(let i = 1; i <= n; i++){
         if(i == cDay){
-            html+=`<li class="current" onclick="clickDate(${cYear},${i})">${i}</li>`
+            html+=`<li class="current" onclick="clickDate(${cYear},${cMonth},${i})">${i}</li>`
         }else{
-            html+=`<li onclick="clickDate(${cYear},${i})">${i}</li>`
+            html+=`<li onclick="clickDate(${cYear},${cMonth},${i})">${i}</li>`
         }
     }
-    // 一次性插入
+    
     document.getElementById('ul').innerHTML = html
 }
-// 日程部分
-let dateArr = {}        // 日程对象，日程以数组的形式进行储存
+// The schedule part
+let dateArr = {}        // Agenda object, which is stored as an array
 let schedule = document.querySelector(".schedule")
 let mark = document.querySelector(".mark")
-// 点击日期
-let currentYear;        // 点击日期临时储存
-let currentDay;         // 点击日期临时储存
-function clickDate(year,day) {
+// Click on the date
+let currentYear;        // Click on date temporary save
+let currentMonth;         // Click on date temporary save
+let currentDay;         // Click on date temporary save
+function clickDate(year,Month,day) {
     currentYear = year;
+    currentMonth = Month;
     currentDay = day;
     mark.style.display = 'flex'
     seheduleInit()
 }
-// 初始化日程
+// Initialization schedule
 function seheduleInit() {
-    let dateString = currentYear.toString()+currentDay
+    let dateString = currentYear.toString()+currentMonth.toString()+currentDay
     if(dateArr[dateString] == undefined){
-        schedule.innerHTML = `<div class="notSchedule">No agenda</div>`
+        schedule.innerHTML = `<div class="notSchedule">暂无日程</div>`
     }else {
         let scheduleHtml = ``
         for(let i = 0; i < dateArr[dateString].length; i++){
@@ -75,23 +80,24 @@ function closeMark() {
 
 let mark_con = document.querySelector(".mark_con")
 let seheduleCon = document.querySelector(".seheduleCon")
-// 点击添加
+// Click on add
 function clickAdd() {
     mark_con.style.display = 'none'
     seheduleCon.style.display = 'block'
 }
-// 取消添加
+//Cancel the add
 function cancelAdd() {
     mark_con.style.display = 'block'
     seheduleCon.style.display = 'none'
     place.value = ''
 }
-// 确定添加
+// Sure to add
 let place = document.querySelector(".place")
 function defineAdd() {
-    let dateString = currentYear.toString()+currentDay
+    let dateString = currentYear.toString()+currentMonth.toString()+currentDay
+    console.log(dateString);
     if(place.value == ''){
-        return alert('Please enter the information!')
+        return alert('请输入信息!')
     }
     let obj = {
         text: place.value
@@ -105,15 +111,15 @@ function defineAdd() {
     seheduleCon.style.display = 'none'
     place.value = ''
 }
+
 window.onunload = function () {
     localStorage.setItem('dateArr',JSON.stringify(dateArr))
 }
 window.onload = function () {
     if(localStorage.getItem('dateArr') == null){
-        dateArr = []
+        dateArr = {}
     }else {
         dateArr = JSON.parse(localStorage.getItem('dateArr'))
     }
-
 }
 // <div className="scheduleList"></div>

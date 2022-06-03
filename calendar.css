@@ -90,7 +90,7 @@ body{
 .dateBox{
     display: flex;
     justify-content: center;
-    margin-top: 250px;
+    margin-top: 100px;
 }
 .bigDate{
     width: 200px;
@@ -121,7 +121,7 @@ body{
     text-align: center;
     color: white;
 }
-/*鏃ョ▼寮规*/
+/*The schedule of bounced*/
 .mark{
     width: 100vw;
     height: 100vh;
