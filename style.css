@@ -1,0 +1,99 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+#content-right{
+  width:200px;
+  height:150px;
+  margin:auto;
+}
+.time-text{
+  width:200px;
+  height:150px;
+  margin:auto;
+}
+
+#container{
+  border:1px solid #fff;
+  border-radius :20px;
+  width:400px;
+  margin:20px auto;
+  padding:100px;
+  text-align:center;
+  background : #fff;
+}
+
+
+#timer{ 
+  color:#149F9F; 
+  font-size:50px; 
+  margin:10px auto;
+  border : 5px solid 	PaleTurquoise;
+  border-radius:50%;
+  width:400px;
+  height:400px;
+  overflow:hidden;
+  position:relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor:default;
+}
+
+#time{
+  margin-top:170px;
+  z-index : 1;
+  position:relative;
+}
+
+#filler{
+  background : #ffffff;
+  height: 0px;
+  width: 200px;
+  position:absolute;
+  bottom:0;
+}
+
+#buttons button { 
+  background:#fff; 
+  border:none; 
+  color:2680EB; 
+  cursor:pointer; 
+  padding:5px; 
+  width:90px; 
+  margin:10px auto;
+  font-size:28px;
+  height : 50px;
+  border-radius : 50px;
+  
+}
+
+#buttons button#shortBreak{
+  background : #fff;
+}
+
+#buttons button#longBreak{
+  background : #fff;
+}
+
+#buttons button#stop{
+  background : #fff;
+}
+button {
+  border-width: 0;
+  background :none;
+  color: #2680EB;
+}
+#timetext{
+   border-width: 0;
+  background :none;
+}
+input {
+  text-align: center;
+  color:#149F9F ;
+}
+.back place-div{
+  height: 100%;
+  width: 100%;
+}

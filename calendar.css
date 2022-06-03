@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.date{
+    width: 600px;
+    border: 2px solid #00AADE;
+    /*margin: 100px 0;*/
+    /*border-radius: 20px;*/
+    overflow: hidden;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+.title{
+    width: 400px;
+    display: flex;
+    font-size: 16px;
+    margin: auto;
+    text-align: center;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Impact;
+}
+.year{
+    margin: 0 40px;
+    padding: 20px 0;
+    display: flex;
+
+    /*flex-direction: column;*/
+}
+.year>span{
+    margin: 0 10px;
+    font-weight: 600;
+}
+#week{
+    margin: auto;
+    list-style-type: none;
+    display: flex;
+}
+#week li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex:1;
+    height: 40px;
+}
+#ul{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    min-height: 380px;
+}
+#ul li {
+    text-align: center;
+    border: 1px solid #fff;
+    cursor: pointer;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    border-radius: 5px;
+    font-size: 20px;
+    flex-wrap: 500;
+}
+.current{
+    color:#00AADE;
+}
+#ul li:hover{
+    border: 1px solid #00AADE;
+    background-color: #00AADE;
+    color: white;
+}
+#prev,#next{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.invalid:hover{
+    border: 1px solid white !important;
+    background-color: white !important;
+    color: white !important;
+}
+.dateBox{
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
+}
+.bigDate{
+    width: 200px;
+    /*height: 100%;*/
+    border: 2px solid #00AADE;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bigCon{
+    width: 100%;
+    height: 100%;
+    background-color: #00AADE;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.bigMonth{
+    font-size: 100px;
+    font-family: Impact;
+    text-align: center;
+    color: white;
+}
+.bigMonthText{
+    text-align: center;
+    color: white;
+}
+/*鏃ョ▼寮规*/
+.mark{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.mark_con,.seheduleCon{
+    width: 50%;
+    height: 50%;
+    padding:20px 30px;
+    box-sizing: border-box;
+    background-color: white;
+
+}
+.seheduleCon{
+    display: none;
+}
+.seheduleCon>textarea{
+    width: 100%;
+    height: 80%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.seheduleBtn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.seheduleBtn>div{
+    width: 30%;
+    padding: 10px 0;
+    text-align: center;
+    border: 1px solid #00AADE;
+    color: #00AADE;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.seheduleBtn>div:hover{
+    color: white;
+    background-color: #00AADE;
+}
+.mark_title{
+    width: 100%;
+    border: 1px solid #00AADE;
+    text-align: center;
+    padding: 10px 0;
+    color: #00AADE;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.mark_title:hover{
+    background-color: #00AADE;
+    color: white;
+}
+.schedule{
+    width: 100%;
+    height: calc(100% - 90px);
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+.scheduleList{
+    width: 100%;
+    min-height: 100px;
+    margin: 10px 0;
+    border: 1px solid lightslategray;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    color: lightslategray;
+}
+.mark_close{
+    width: 50%;
+    border: 1px solid #00AADE;
+    text-align: center;
+    padding: 10px 0;
+    color: #00AADE;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin: auto;
+}
+.mark_close:hover{
+    background-color: #00AADE;
+    color: white;
+}
+.notSchedule{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: lightslategray;
+}
