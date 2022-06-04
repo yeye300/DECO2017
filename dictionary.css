@@ -13,25 +13,17 @@ body{
   min-height: 100vh;
   background: #4A90E2;
 }
-.back2{
-  position: absolute;
-  z-index: 1;
-  top:370px;
-  right:780px;
-}
+
 ::selection{
   color: #fff;
   background: #4A90E2; 
- 
 }
-
 .wrapper{
   width: 420px;
   border-radius: 7px;
   background: #fff;
   padding: 25px 28px 45px;
-  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05);
- 
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.05); 
 }
 
 .wrapper header{
@@ -54,7 +46,7 @@ body{
 }
 .search input:focus{
   padding: 0 41px;
-  border: 2px solid #4A90E2;
+  border: 2px solid #4D59FB;
 }
 .search input::placeholder{
   color: #B8B8B8;
@@ -71,7 +63,7 @@ body{
   font-size: 16px;
 }
 .search input:focus ~ i{
-  color: #4A90E2;
+  color: #4D59FB;
 }
 .search span{
   right: 15px;
@@ -141,7 +133,7 @@ ul .content::-webkit-scrollbar{
 .content li .details{
   padding-left: 10px;
   border-radius: 4px 0 0 4px;
-  border-left: 3px solid #FF0000;
+  border-left: 3px solid #4D59FB;
 }
 .content li p{
   font-size: 17px;

@@ -1,0 +1,52 @@
+/*The casing outside the circle*/
+#container{
+    border:1px solid #fff;
+    border-radius :20px;
+    width:600px;
+    margin:20px auto;
+    padding:100px;
+    text-align:center;
+  }
+  
+  /*The casing outside the circle*/
+  #timer{ 
+    color:#149F9F; 
+    font-size:50px; 
+    margin:10px auto;
+    border:5px solid 	PaleTurquoise;
+    border-radius:50%;
+    width:400px;
+    height:400px;
+    overflow:hidden;
+    position:relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor:default;
+  }
+  
+  /*The casing inside the circle*/
+  #time{
+    margin-top:170px;
+  }
+  
+  /*The casing inside the circle*/
+  #filler{
+    background : #ffffff;
+    height: 0px;
+    width: 200px;
+    bottom:0;
+  }
+  
+  /*button*/
+  #buttons button { 
+    background:#fff; 
+    border:none; 
+    color:2680EB; 
+    cursor:pointer; 
+    width:90px; 
+    margin:10px auto;
+    font-size:28px;
+  }
+  

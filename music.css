@@ -1,4 +1,19 @@
-.span-lead{
-font-size:200%;
-text-align:center;
-}
+.ALL{
+    color: black;
+    left: 120px;
+    top: 80px;
+  }
+  .ALL div {
+    position: fixed;
+    align-items:center;
+    width: 50%;
+    height: 75%;
+    margin:30px;
+  }
+  .ALL .topic{
+    left:0;
+  }
+  .ALL .lyrics {
+    padding: 100;
+    right: 0;
+  }
