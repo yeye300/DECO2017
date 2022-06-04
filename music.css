@@ -1,19 +1,20 @@
 .ALL{
-    color: black;
-    left: 120px;
-    top: 80px;
-  }
-  .ALL div {
-    position: fixed;
-    align-items:center;
-    width: 50%;
-    height: 75%;
-    margin:30px;
-  }
-  .ALL .topic{
-    left:0;
-  }
-  .ALL .lyrics {
-    padding: 100;
-    right: 0;
-  }
+  color: black;
+  left: 120px;
+  top: 80px;
+}
+.ALL div {
+  position: fixed;
+  align-items:center;
+  width: 300px;
+  height: 75%;
+  margin:30px;
+}
+.ALL .topic{
+  left:0;
+  
+}
+.ALL .lyrics {
+  padding: 100;
+  left: 300px;
+}
