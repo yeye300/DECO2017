@@ -1,0 +1,31 @@
+#backs{
+    pointer-events:auto;
+  }
+  #countdown{
+    text-align: center;
+    padding:400px;
+    transform: scale(5,5);
+    border-style:solid;
+    border-width:1px;
+    border-color:#AFEEEE;
+    pointer-events:none;
+  }
+  button {
+    border-width: 0;
+    background :none;
+    color: #2680EB;
+    pointer-events:auto;
+    font-size:60%;
+  }
+  #timetext{
+     border-width: 0;
+  }
+  input {
+    text-align: center;
+    color:black  ;
+  }
+  .back place-div{
+    height: 100%;
+    width: 100%;
+  }
+  
